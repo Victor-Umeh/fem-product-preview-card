@@ -1,0 +1,102 @@
+/* variables */
+:root {
+  /* primary colors */
+  --cream-primary: hsl(30, 38%, 92%);
+  --dark-cyan-primary: hsl(158, 36%, 37%);
+
+  /* neutral colors */
+  --Very-dark-blue: hsl(212, 21%, 14%);
+  --Dark-grayish-blue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+}
+/* css reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* mobile first */
+body {
+  font-family: Montserrat;
+  font-size: 14px;
+  background-color: var(--cream-primary);
+  padding: 2rem 1rem;
+}
+.perfume {
+  background-color: var(--White);
+  border-radius: 12px;
+  max-width: 600px;
+  overflow: hidden;
+}
+.perfume__card {
+  padding: 1.3rem;
+}
+.card__ctx {
+  color: var(--Dark-grayish-blue);
+  letter-spacing: 6px;
+  margin-bottom: 12px;
+}
+.card__header {
+  font-family: Fraunces;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--very-dark-blue);
+  margin-bottom: 12px;
+}
+.card-paragraph {
+  color: var(--Dark-grayish-blue);
+  line-height: 1.6;
+  max-width: 38ch;
+}
+.card__price {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 12px;
+}
+.card__price-main {
+  color: var(--dark-cyan-primary);
+  font-size: 2rem;
+  font-family: Fraunces;
+}
+.card__price-discount {
+  color: var(--Dark-grayish-blue);
+  text-decoration: line-through;
+}
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: var(--White);
+  font-weight: 700;
+  background-color: var(--dark-cyan-primary);
+  border: none;
+  width: 100%;
+  padding: 1rem 0;
+
+  margin-top: 20px;
+  border-radius: 8px;
+}
+/* desktop layout */
+@media (min-width: 600px) {
+  .perfume {
+    display: flex;
+    margin-inline: auto;
+    margin-top: 12rem;
+  }
+  .perfume__card {
+    padding: 2rem;
+  }
+  button:hover {
+    background-color: hsl(158, 36%, 15%);
+    cursor: pointer;
+    transition: all 0.3s linear;
+  }
+}
+/* utility */
